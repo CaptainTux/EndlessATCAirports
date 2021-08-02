@@ -1,0 +1,6 @@
+# this is an example config for the videomap parser for vSTARS sector files written by Captain Tux - https://github.com/CaptainTux
+# the latest version will be available at https://github.com/AdamJCavanaugh/EndlessATCAirports
+
+# put names of sector files here
+[filenames]
+vSTARS_N90_2103
