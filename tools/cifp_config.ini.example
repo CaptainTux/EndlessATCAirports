@@ -1,8 +1,6 @@
 # this is an example config for the cifp parser written by Captain Tux - https://github.com/CaptainTux
 # the latest version will be available at https://github.com/AdamJCavanaugh/EndlessATCAirports
 
-# make sure you rename this file to cifp_config.ini
-
 # this is a parser for the CIFP, published by the FAA
 # it provides SIDS and STARS for airports in the USA for EndlessATC
 # it also generates routes to final, i.e., procedures where pilots navigate to final from an IAF
@@ -16,35 +14,250 @@ filename = CIFP/FAACIFP18
 
 # put your airports here
 [airports]
-kmsp
+klax
+ksan
+ksna
+kont
+klgb
+kbur
+kvny
+ksmo
+kmyf
+kcrq
+kpsp
 
 # pretty self explanatory, apch_default_top_alt is the top altitude to cross an IAF
 [defaults]
-star_top_alt = 13000
+star_top_alt = 23000
 star_top_speed = 280
-apch_top_alt = 6000
-max_approach_alt = 2500
+apch_top_alt = 10000
+max_approach_alt = 6000
 max_approach_speed = 200
+mag_var = 12
+elev = 113
+
+# procedure names
+[procedure_names]
+# LAX SIDs
+sxc = catalina
+chaty = chaty
+darrk = dark
+dotss = dots
+gardy = gardy
+gmn = gorman
+ladyj = lady
+laxx = los angeles
+mooos = moos
+muelr = mueller
+orcka = orcka
+oshnn = ocean
+prch = perch
+pndah = panda
+sli = seal beach
+sebby = sabby
+skwrl = skarwl
+summr = summer
+trton = triton
+tusti = tusti
+vtu = ventura
+wnndy = wendy
+zilli = zilli
+
+# LAX STARs
+anjll = angel
+baset = baset
+bayst = bayest
+bigbr = bigber
+boget = boget
+bruen = bruen
+dirby = derby
+goatz = goats
+hlywd = hiwald
+huull = hull
+irnmn = ironman
+kimmo = kimmo
+leena = lena
+mdnyt = mandy
+fim = moorpark
+ocean = ocean
+olaaa = ola
+rydrr = rider
+sadde =  sadde
+seavu = seavu
+snstt = sunset
+vista = vista
+wayve = wayve
+zuuma = zuuma
+
+# BUR, VNY SIDs
+elmoo = elmo
+orosz = oros
+slapp = slap
+vny = van nuys
+vvera = vera
+
+adamm = adam
+canog = canoga
+harys = harris
+hayez = hayes
+nual = newhall
+rsco = roscoe
+wlkkr = walker
+
+# BUR, VNY STARs
+fern = fernando
+janny = janny
+lynxx = lynx
+rokkr = rocker
+thrne = thorne
+weesl = weasel
+
+ivins = ivans
+
+# SNA, LGB SIDs
+anahm = anaheim
+chanl = channel
+elb = el toro
+finzz = finz
+hawwc = hawk
+hhero = hero
+hobow = hobow
+irv = irvine
+mikaa = mika
+musel = musel
+piggn = piggen
+stayy = stay
+
+fritr = friter
+topmm = top man
+zoomm = zoom
+
+# SNA STARs
+dsnee = disney
+kayoh = kayo
+ohsea = oh sea
+rooby = robby
+tandy = tandy
+tillt = tilt
+
+baubb = baub
+pcifc = pacific
+
+# PSP SIDs
+cath = cathedral
+trm = thermal
+
+# PSP STARs
+clowd = cloud
+sbono = sobono
+sizlr = silzer
+
+# SAN, CRQ, MYF SIDs
+padrz = padris
+brdr = border
+cward = coward
+echho = echo
+falcc = falcon
+mmoto = moto
+peble = peble
+sayow = sayow
+zzooo = zoo
+
+# SAN, CRQ STARs
+baret = baret
+comix = comix
+hubrd = hubberd
+lucki = lucky
+plyya = playa
+shamu = shamu
+topgn = topgun
+legoz = legos
+
+# ONT SIDs
+nikkl = nikel
+pom = pomona
+rajee = raj
+snshn = sunshine
+
+# ONT STARs
+glrno = galerno
+jckie = jackey
+karlb = karl
+scbby = scibby
+seter = seter
+ziggy = siggy
 
 # pretty self explanatory, define entrypoints with bearing, minimum altitude and speed
 # entries should look like this: luccy = {"bearing": "360", "alt": "11000", "speed": "280"}
 # note the quotes around the numbers, otherwise you'll get a JsonDecodeError
 [entrypoints]
-luccy = {"bearing": "360", "alt": "11000", "speed": "280"}
-bluem = {"bearing": "180", "alt": "11000", "speed": "280"}
-twinz = {"bearing": "090", "alt": "11000", "speed": "250"}
-ollee = {"bearing": "330", "alt": "11000", "speed": "250"}
-zibby = {"bearing": "180", "alt": "10000", "speed": "250"}
-kkilr = {"bearing": "090", "alt": "12000", "speed": "280"}
-bayks = {"bearing": "090", "alt": "12000", "speed": "280"}
-nitzr = {"bearing": "180", "alt": "12000", "speed": "280"}
-shonn = {"bearing": "270", "alt": "11000", "speed": "250"}
-ofson = {"bearing": "250", "alt": "11000", "speed": "280"}
-trget = {"bearing": "180", "alt": "11000", "speed": "250"}
+# LAX
+rncho = {"bearing": "110", "alt": "26000", "speed": "300"}
+boyel = {"bearing": "070", "alt": "12000", "speed": "270"}
+arnes = {"bearing": "100", "alt": "13000", "speed": "270"}
+gnzzo = {"bearing": "290", "alt": "13000", "speed": "270"}
+mdots = {"bearing": "320", "alt": "20000", "speed": "270"}
+frasr = {"bearing": "340", "alt": "16000", "speed": "270"}
+irnmn = {"bearing": "320", "alt": "12000", "speed": "270"}
+# bigbr = {"bearing": "100", "alt": "13000", "speed": "270"}
+ropez = {"bearing": "070", "alt": "13000", "speed": "270"}
+shrtz = {"bearing": "090", "alt": "13000", "speed": "270"}
+dirby = {"bearing": "230", "alt": "16000", "speed": "280"}
+boget = {"bearing": "040", "alt": "8000", "speed": "250"}
+goatz = {"bearing": "220", "alt": "12000", "speed": "270"}
+benet = {"bearing": "310", "alt": "11000", "speed": "270"}
+paula = {"bearing": "360", "alt": "11000", "speed": "250"}
+olaaa = {"bearing": "170", "alt": "13000", "speed": "270"}
+gknee = {"bearing": "240", "alt": "12000", "speed": "270"}
+vtu = {"bearing": "310", "alt": "10000", "speed": "250"}
+reyes = {"bearing": "330", "alt": "12000", "speed": "250"}
+ocn = {"bearing": "160", "alt": "13000", "speed": "270"}
+danyy = {"bearing": "330", "alt": "17000", "speed": "270"}
+
+# SAN
+carul = {"bearing": "330", "alt": "12000", "speed": "270"}
+pillo = {"bearing": "150", "alt": "10000", "speed": "270"}
+trixi = {"bearing": "100", "alt": "13000", "speed": "270"}
+heelx = {"bearing": "140", "alt": "13000", "speed": "270"}
+plyya = {"bearing": "300", "alt": "11000", "speed": "270"}
+guuse = {"bearing": "100", "alt": "12000", "speed": "270"}
+sxc = {"bearing": "230", "alt": "25000", "speed": "330"}
+lax = {"bearing": "360", "alt": "25000", "speed": "330"}
+huulk = {"bearing": "330", "alt": "25000", "speed": "330"}
+
+# LGB and SNA
+baubb = {"bearing": "290", "alt": "12000", "speed": "270"}
+kadyn = {"bearing": "060", "alt": "13000", "speed": "270"}
+phiya = {"bearing": "100", "alt": "12000", "speed": "270"}
+dawna = {"bearing": "060", "alt": "13000", "speed": "270"}
+tandy = {"bearing": "300", "alt": "13000", "speed": "270"}
+
+# ONT
+casaa = {"bearing": "360", "alt": "13000", "speed": "250"}
+grray = {"bearing": "070", "alt": "13000", "speed": "270"}
+solay = {"bearing": "150", "alt": "13000", "speed": "270"}
+rothy = {"bearing": "060", "alt": "12000", "speed": "270"}
+flavr = {"bearing": "330", "alt": "14000", "speed": "250"}
+
+# BUR
+rokkr = {"bearing": "360", "alt": "13000", "speed": "250"}
+ironn = {"bearing": "120", "alt": "13000", "speed": "250"}
+weesl = {"bearing": "360", "alt": "13000", "speed": "250"}
+sntra = {"bearing": "060", "alt": "19000", "speed": "330"}
+dyver = {"bearing": "075", "alt": "19000", "speed": "330"}
+
+# SMO
+wayve = {"bearing": "360", "alt": 13000, "speed": "250"}
+
+# CRQ
+nugee = {"bearing": "360", "alt": 23000, "speed": "250"}
+
+# PSP
+sizlr = {"bearing": "360", "alt": 23000, "speed": "330"}
 
 # aircraft on an approach procedure will go no faster than alt_min_speeds[a] if the crossing restriction is aob a
 [alt_min_speeds]
-4000 = 200
+# 4000 = 210
 
 # specify final approach fixes with final altitude, speed and distance from the airport to intercept the ILS
 # some final fixes on published charts might be too close to the airport
@@ -53,27 +266,120 @@ trget = {"bearing": "180", "alt": "11000", "speed": "250"}
 # entries should look like this: ketam = {"final_length": "9", "alt": "2300", "speed": "200"}
 # note the quotes around the numbers, otherwise you'll get a JsonDecodeError
 [final_app_fixes]
-ketam = {"final_length": "9", "alt": "2300", "speed": "200"}
-hamml = {"final_length": "9", "alt": "3000", "speed": "200"}
-zesty = {"final_length": "9", "alt": "3000", "speed": "200"}
-arjae = {"final_length": "10", "alt": "2800", "speed": "200"}
-cusac = {"final_length": "9", "alt": "2500", "speed": "200"}
-fates = {"final_length": "9", "alt": "2600", "speed": "200"}
-aabez = {"final_length": "9", "alt": "3000", "speed": "200"}
-sammz = {"final_length": "9", "alt": "3000", "speed": "200"}
-rozee = {"final_length": "9", "alt": "3000", "speed": "200"}
+# LAX
+nathn = {"final_length": "9", "alt": "3600", "speed": "200"}
+ottes = {"final_length": "9", "alt": "3600", "speed": "200"}
+fekil = {"final_length": "9", "alt": "2600", "speed": "200"}
+timse = {"final_length": "9", "alt": "2600", "speed": "200"}
 
+sutie = {"final_length": "7", "alt": "2200", "speed": "200"}
+kobee = {"final_length": "7", "alt": "2200", "speed": "200"}
+hunda = {"final_length": "11", "alt": "1900", "speed": "200"}
+shell = {"final_length": "11", "alt": "1900", "speed": "200"}
+
+# SAN
+gatto = {"final_length": "6.5", "alt": "1900", "speed": "200"}
+okain = {"final_length": "11", "alt": "2700", "speed": "200"}
+
+# LGB
+lucig = {"final_length": "6", "alt": "2066", "speed": "200"}
+
+# ONT
+jalot = {"final_length": "9", "alt": "2900", "speed": "200"}
+pecin = {"final_length": "11", "alt": "2800", "speed": "200"}
+seyko = {"final_length": "11", "alt": "2800", "speed": "200"}
+yucuc = {"final_length": "10", "alt": "2900", "speed": "200"}
+eyira = {"final_length": "11", "alt": "2900", "speed": "200"}
+takoe = {"final_length": "10", "alt": "2900", "speed": "200"}
+zeblu = {"final_length": "10", "alt": "2900", "speed": "200"}
+gorpe = {"final_length": "11", "alt": "2900", "speed": "200"}
+
+# BUR
+silex = {"final_length": "11", "alt": "3000", "speed": "200"}
+
+# SNA
+effie = {"final_length": "8", "alt": "2800", "speed": "200"}
+hukem = {"final_length": "8", "alt": "2900", "speed": "200"}
+minoe = {"final_length": "10", "alt": "3000", "speed": "200"}
+
+# VNY
+jinat = {"final_length": "10", "alt": "3800", "speed": "200"}
+
+# SMO
+movve = {"final_length": 7, "alt": "3000", "speed": "200"}
+rnsto = {"final_length": 8, "alt": "3000", "speed": "200"}
+
+# MYF
+nesty = {"final_length": 9, "alt": "2500", "speed": "200"}
+
+# CRQ
+fleee = {"final_length": 6, "alt": "1700", "speed": "170"}
+wunub = {"final_length": 7, "alt": "2300", "speed": "180"}
+jabal = {"final_length": 7, "alt": "2300", "speed": "180"}
+
+# PSP
+tevuc = {"final_length": 10, "alt": "2900", "speed": "200"}
 
 # replace runway names with your own runway names
 # the runway names will consist of the runway prefix (which is specified per airport below)
 # followed by the runway name, which you can look up in ./cifp_out/apt_data/cifp_{icao}.csv
 # look for the fields which have 'G' in the 'type' column
 [replace_runway_names]
-kmsp_rw17 = KMSP_17_35
-kmsp_rw35 = KMSP_17_35, rev
-kmsp_rw12l = KMSP_12L_30R
-kmsp_rw12r = KMSP_12R_30L
-kmsp_rw30r = KMSP_12L_30R, rev
-kmsp_rw30l = KMSP_12R_30L, rev
-kmsp_rw04 = KMSP_04_22
-kmsp_rw22 = KMSP_04_22, rev
+klax_rw06l = KLAX_06L_24R
+klax_rw06r = KLAX_06R_24L
+klax_rw07l = KLAX_07L_25R
+klax_rw07r = KLAX_07R_25L
+klax_rw24r = KLAX_06L_24R, rev
+klax_rw24l = KLAX_06R_24L, rev
+klax_rw25r = KLAX_07L_25R, rev
+klax_rw25l = KLAX_07R_25L, rev
+
+ksan_rw09 = KSAN_09_27
+ksan_rw27 = KSAN_09_27, rev
+
+kont_rw08l = KONT_08L_26R
+kont_rw08r = KONT_08R_26L
+kont_rw26r = KONT_08L_26R, rev
+kont_rw26l = KONT_08R_26L, rev
+
+klgb_rw08l = KLGB_08L_26R
+klgb_rw08r = KLGB_08R_26L
+klgb_rw26r = KLGB_08L_26R, rev
+klgb_rw26l = KLGB_08R_26L, rev
+klgb_rw12 = KLGB_12_30
+klgb_rw30 = KLGB_12_30, rev
+
+kbur_rw08 = KBUR_08_26
+kbur_rw26 = KBUR_08_26, rev
+kbur_rw15 = KBUR_15_33
+kbur_rw33 = KBUR_15_33, rev
+
+ksna_rw02l = KSNA_02L_20R
+ksna_rw02r = KSNA_02R_20L
+ksna_rw20r = KSNA_02L_20R, rev
+ksna_rw20l = KSNA_02R_20L, rev
+
+kvny_rw16l = KVNY_16L_34R
+kvny_rw16r = KVNY_16R_34L
+kvny_rw34r = KVNY_16L_34R, rev
+kvny_rw34l = KVNY_16R_34L, rev
+
+ksmo_rw03 = KSMO_03_21
+ksmo_rw21 = KSMO_03_21, rev
+
+kmyf_rw05 = KMYF_05_23
+kmyf_rw10l = KMYF_10L_28R
+kmyf_rw10r = KMYF_10r_28l
+
+kmyf_rw23 = KMYF_05_23, rev
+kmyf_rw28r = KMYF_10L_28R, rev
+kmyf_rw20l = KMYF_10R_28L, rev
+
+kcrq_rw06 = KCRQ_06_24
+kcrq_rw24 = KCRQ_06_24, rev
+
+kpsp_rw13l = KPSP_13L_31R
+kpsp_rw13r = KPSP_13R_31L
+
+kpsp_rw31r = KPSP_13L_31R, rev
+kpsp_rw31l = KPSP_13R_31L, rev
